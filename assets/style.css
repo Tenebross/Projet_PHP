@@ -1,0 +1,42 @@
+.cadre {
+    width: 85%;
+    height: 10%;
+    background-color: grey;
+    display: flex;
+
+}
+
+.info{
+    width: 70%;
+    height: 90%;
+    background-color: rgb(151, 149, 149);
+    display:flex;
+    position: relative;
+    
+}
+.info1{
+    display:flex;
+    align-content: space-around;
+}
+.info2{
+    display:flex;
+}
+.titre{
+    width: 25%;
+    height: 90%;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.commentaires{
+    width: 40%;
+    height: 90%;
+    justify-self: flex-end;
+    position: relative;
+
+}
+
+.vendeur, .nombre, .prix{
+    height: 90%;
+    position: relative;
+}
