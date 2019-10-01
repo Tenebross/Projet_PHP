@@ -3,9 +3,9 @@
 function connectDB()
 {
     $_host = 'localhost';
-    $_login = 'dawan';
-    $_pwd = 'dawan';
-    $_DBName = 'jeux video';
+    $_login = 'root';
+    $_pwd = '';
+    $_DBName = 'jeux_video';
 
     $connect = mysqli_connect($_host, $_login, $_pwd, $_DBName);
 
