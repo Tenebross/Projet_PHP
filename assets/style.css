@@ -8,7 +8,7 @@
 
 .info{
     width: 70%;
-    height: 90%;
+    height: 180px;
     background-color: rgb(151, 149, 149);
     display:flex;
     position: relative;
@@ -16,7 +16,7 @@
 }
 .info1{
     display:flex;
-    align-content: space-around;
+    flex-direction: column;
 }
 .info2{
     display:flex;

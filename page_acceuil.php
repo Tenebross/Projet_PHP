@@ -1,6 +1,11 @@
 <?php
 require_once 'functions/connectDB.php';
+//require_once 'functions/connectUser.php';
 $connect = connectDB();
+session_start();
+$_SESSION["identifiant"] = $_POST["identifiant"];
+$_SESSION["password"] = $_POST["password"];
+var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,9 +25,19 @@ $connect = connectDB();
     <?php include_once 'menu.php'; ?>
 </header>
 <div>
+    <?php  $login = $_POST['identifiant'];
+    $password = $_POST['password'];
+    $sql="SELECT * FROM users WHERE identifiant='$login' AND password='$password' ";
+    var_dump($sql);
+    $req=mysqli_query($connect,$sql);
+    if ($_SESSION['identifiant'] && $_SESSION['password'] == $sql['identifiant' && $sql['password']]){
+        echo "trop bien =D";
+    
+    }else{
+        echo "error";
+    }?>
     <?php $sql_liste_jeuxvideo = "SELECT * FROM jeux_video";
     $result = mysqli_query($connect, $sql_liste_jeuxvideo);
-    sort($result);
     while ($assoc = mysqli_fetch_assoc($result)) {?>
         <div class="cadre">
         <div class="titre">
